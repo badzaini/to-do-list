@@ -176,10 +176,16 @@ export default function Home() {
             </form>
           </Form>
         </Card>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
-          {data.map((d, index) => (
-            <CardToDo key={index} i={index} d={d} onDelete={deleteData} />
-          ))}
+        <div>
+          <h3 className="text-xl tracking-tight pb-6">
+            The total of to-do-list is <b>{data.length}</b>
+          </h3>
+
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6">
+            {data.map((d, index) => (
+              <CardToDo key={index} i={index} d={d} onDelete={deleteData} />
+            ))}
+          </div>
         </div>
       </div>
     </div>
